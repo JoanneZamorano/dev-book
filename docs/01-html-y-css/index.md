@@ -13,10 +13,11 @@ El esqueleto de la web. Aquí guardo las buenas prácticas para estructurar cont
 
  - [x] [1. ¿Qué es HTML y para qué sirve?](html/01-html-basico.md)
  - [x] [2. Estructura, Multimedia y Rutas](html/02-Estructura-Multimedia-y-Rutas.md)
- - [x] [3. HTML Semántico y Elementos de Texto Avanzados](html/03-Elementos-de-Texto-Avanzados.md)
-  - [ ] [4. Formularios](index.md)
-  - [ ] [5. Tablas](index.md)
-  - [ ] [6. Accesibilidad](index.md)
+  - [x] [3. Estructura Global, Metadatos y SEO](html/03-Estructura-Global-Metadatos-y-SEO.md)
+ - [x] [4. HTML Semántico y Elementos de Texto Avanzados](html/04-Elementos-de-Texto-Avanzados.md)
+  - [ ] [5. Formularios](index.md)
+  - [ ] [6. Tablas](index.md)
+  - [ ] [7. Accesibilidad](index.md)
 
 ### 🎨 2. CSS3 (Estilos y Diseño)
 La capa visual. El objetivo de este bloque es dominar cómo transformar un documento de texto aburrido en una interfaz moderna y adaptables a móviles.
