@@ -78,14 +78,14 @@ custom_checkbox = true
 # -------------------------------------------------------------------
 [[project.theme.palette]]
 scheme = "default"
-primary = "lime"
-accent = "lime"
+primary = "cyan"
+accent = "cyan"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
-primary = "lime"
-accent = "lime"
+primary = "cyan"
+accent = "cyan"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
