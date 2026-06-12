@@ -51,9 +51,9 @@ El cuaderno está dividido en bloques ordenados según voy avanzando en mi apren
 
 <div style="display: flex; gap: 10px; margin-top: 15px;">
     <a href="https://github.com/JoanneZamorano" target="_blank" class="md-button md-button--primary">
-    GitHub
+    ⭐GitHub
     </a>
     <a href="https://www.linkedin.com/in/joanne-zamorano/" target="_blank" class="md-button md-button--primary">
-    LinkedIn
+    ⭐LinkedIn
     </a>
 </div>
