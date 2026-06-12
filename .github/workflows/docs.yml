@@ -25,7 +25,7 @@ jobs:
 
       - name: Deploy Site
         env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true" # 🌟 Esto fuerza la compatibilidad con Node 24 y evita el fallo
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
         run: |
-          $HOME/.local/bin/uvx zensical build
+          $HOME/.local/bin/uvx --with ghp-import zensical build
           $HOME/.local/bin/uvx ghp-import -n -p -f site
