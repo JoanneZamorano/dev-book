@@ -25,7 +25,7 @@ features = [
 ]
 
 # -------------------------------------------------------------------
-# 1. EXTENSIONES DE MARKDOWN (Bloques con un solo corchete [ ])
+# 1. EXTENSIONES DE MARKDOWN
 # -------------------------------------------------------------------
 [project.markdown_extensions.abbr]
 [project.markdown_extensions.admonition]
@@ -74,7 +74,7 @@ custom_checkbox = true
 [project.markdown_extensions.pymdownx.tilde]
 
 # -------------------------------------------------------------------
-# 2. PALETAS DE COLORES (Siempre al final del documento con [[ ]])
+# 2. PALETAS DE COLORES (Fijadas en Cyan)
 # -------------------------------------------------------------------
 [[project.theme.palette]]
 scheme = "default"
