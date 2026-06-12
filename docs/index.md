@@ -6,6 +6,13 @@ Este es mi rincón personal de documentación técnica. Aquí voy recopilando to
 
 !!! info "⭐ ¡Hola, compañero de código!"
     Si eres estudiante y te has encontrado con esta web, me ayudaría muchísimo si le das una estrella al proyecto en GitHub para que pueda llegar a más gente. ¡Espero que te ayude y te sirva tanto como a mí!
+    <div style="display: flex; gap: 10px; margin-top: 15px;">
+    <a href="https://github.com/JoanneZamorano/dev-book" target="_blank" class="md-button">
+        ⭐ Dar estrella en GitHub
+    </a>
+    </div>
+
+
 
 ---
 
@@ -41,3 +48,12 @@ El cuaderno está dividido en bloques ordenados según voy avanzando en mi apren
 ## 💡 Recordatorio para mi "Yo" del futuro
 
 > "Si te topas con un error que te saca de quicio, no borres el código a lo loco. Documenta el fallo en la sección de Backend, analiza por qué ha pasado y apunta la solución. Tu 'yo' de dentro de seis meses te lo agradecerá eternamente."
+
+<div style="display: flex; gap: 10px; margin-top: 15px;">
+    <a href="https://github.com/JoanneZamorano" target="_blank" class="md-button md-button--primary">
+    GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/joanne-zamorano/" target="_blank" class="md-button md-button--primary">
+    LinkedIn
+    </a>
+</div>

@@ -1,4 +1,4 @@
-## 📅 ¿Qué es HTML y para qué sirve?
+# ¿Qué es HTML y para qué sirve?
 
 **HTML** significa *HyperText Markup Language* (Lenguaje de Marcas de Hipertexto). Lo primero y más importante que debes grabar a fuego: **no es un lenguaje de programación**. No tiene lógica, ni condicionales, ni bucles. 
 

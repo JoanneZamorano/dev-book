@@ -1,0 +1,1710 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mi cuaderno de bitácora de desarrollo">
+      
+      
+        <meta name="author" content="Joa">
+      
+      
+      
+        <link rel="prev" href="../01-html-basico/">
+      
+      
+        <link rel="next" href="../03-Elementos-de-Texto-Avanzados/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.45">
+    
+    
+      
+        <title>Estructura, Multimedia y Rutas - Joa's dev-book</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.fba56155.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navegación"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estructura-multimedia-y-rutas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Joa&#x27;s dev-book" class="md-header__button md-logo" aria-label="Joa's dev-book" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegación">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Joa's dev-book
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estructura, Multimedia y Rutas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Joa&#x27;s dev-book" class="md-nav__button md-logo" aria-label="Joa's dev-book" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Joa's dev-book
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🚀 Bienvenido a Joa's dev-book
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  01 html y css
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  01 html y css
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Html
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Html
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-html-basico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ¿Qué es HTML y para qué sirve?
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estructura, Multimedia y Rutas
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estructura, Multimedia y Rutas
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamentos-de-los-elementos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Fundamentos de los Elementos HTML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Fundamentos de los Elementos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sintaxis Básica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-vacios-void-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Elementos Vacíos (Void Elements)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Atributos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-elementos-comunes-del-cuerpo-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Elementos Comunes del Cuerpo (<code>&lt;body&gt;</code>)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identificadores-clases-y-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Identificadores, Clases y Enlaces
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Identificadores, Clases y Enlaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ids-vs-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IDs vs. Clases
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDs vs. Clases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estados-de-los-enlaces-pseudoclases" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estados de los Enlaces (Pseudoclases)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rutas-absolutas-vs-relativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Rutas Absolutas vs. Relativas
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Rutas Absolutas vs. Relativas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ruta-absoluta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ruta Absoluta
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-relativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ruta Relativa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-elementos-multimedia-y-contenido-reemplazado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Elementos Multimedia y Contenido Reemplazado
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Elementos Multimedia y Contenido Reemplazado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-img" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Imágenes (<code>&lt;img&gt;</code>)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elemento-iframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Elemento <code>&lt;iframe&gt;</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-audio-y-video-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Audio (<code>&lt;audio&gt;</code>) y Video (<code>&lt;video&gt;</code>)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-global-metadatos-y-seo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Estructura Global, Metadatos y SEO
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estructura Global, Metadatos y SEO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seo-y-etiquetas-open-graph-og" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SEO y Etiquetas Open Graph (OG)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-entidades-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Entidades HTML
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Elementos-de-Texto-Avanzados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  HTML Semántico y Elementos de Texto Avanzados
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../02-lenguajes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  02 lenguajes
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  02 lenguajes
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../03-bakend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  03 bakend
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  03 bakend
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../04-frontend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  04 frontend
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  04 frontend
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../05-herramientas/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  05 herramientas
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  05 herramientas
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05-herramientas/markdown/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  Markdown in 5min
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamentos-de-los-elementos-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Fundamentos de los Elementos HTML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Fundamentos de los Elementos HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sintaxis Básica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-vacios-void-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Elementos Vacíos (Void Elements)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Atributos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-elementos-comunes-del-cuerpo-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Elementos Comunes del Cuerpo (<code>&lt;body&gt;</code>)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identificadores-clases-y-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Identificadores, Clases y Enlaces
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Identificadores, Clases y Enlaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ids-vs-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IDs vs. Clases
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IDs vs. Clases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estados-de-los-enlaces-pseudoclases" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estados de los Enlaces (Pseudoclases)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rutas-absolutas-vs-relativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Rutas Absolutas vs. Relativas
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Rutas Absolutas vs. Relativas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ruta-absoluta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ruta Absoluta
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-relativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ruta Relativa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-elementos-multimedia-y-contenido-reemplazado" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Elementos Multimedia y Contenido Reemplazado
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Elementos Multimedia y Contenido Reemplazado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-img" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Imágenes (<code>&lt;img&gt;</code>)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elemento-iframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Elemento <code>&lt;iframe&gt;</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-audio-y-video-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Audio (<code>&lt;audio&gt;</code>) y Video (<code>&lt;video&gt;</code>)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-global-metadatos-y-seo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Estructura Global, Metadatos y SEO
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estructura Global, Metadatos y SEO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seo-y-etiquetas-open-graph-og" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SEO y Etiquetas Open Graph (OG)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-entidades-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Entidades HTML
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  
+  <span class="md-ellipsis">
+    🚀 Bienvenido a Joa's dev-book
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    01 html y css
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../01-html-basico/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="estructura-multimedia-y-rutas">Estructura, Multimedia y Rutas<a class="headerlink" href="#estructura-multimedia-y-rutas" title="Permanent link">&para;</a></h1>
+<h2 id="1-fundamentos-de-los-elementos-html">1. Fundamentos de los Elementos HTML<a class="headerlink" href="#1-fundamentos-de-los-elementos-html" title="Permanent link">&para;</a></h2>
+<p>Los elementos son los bloques de construcción de cualquier documento HTML. Representan la estructura del contenido (encabezados, párrafos, enlaces, imágenes, etc.).</p>
+<h3 id="sintaxis-basica">Sintaxis Básica<a class="headerlink" href="#sintaxis-basica" title="Permanent link">&para;</a></h3>
+<p>La mayoría de los elementos constan de una etiqueta de apertura, el contenido y una etiqueta de cierre:
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">elementName</span><span class="p">&gt;</span>Content goes here<span class="p">&lt;/</span><span class="nt">elementName</span><span class="p">&gt;</span>
+</span></code></pre></div></p>
+<h3 id="elementos-vacios-void-elements">Elementos Vacíos (Void Elements)<a class="headerlink" href="#elementos-vacios-void-elements" title="Permanent link">&para;</a></h3>
+<p>Son aquellos que no pueden tener contenido ni necesitan una etiqueta de cierre; solo disponen de una etiqueta de inicio. Es común y aceptable verlos con o sin una barra inclinada <code>/</code> al final:</p>
+<p><code>&lt;img&gt;</code> o <code>&lt;img/&gt;</code></p>
+<p><code>&lt;meta&gt;</code> o <code>&lt;meta/&gt;</code></p>
+<h3 id="atributos">Atributos<a class="headerlink" href="#atributos" title="Permanent link">&para;</a></h3>
+<p>Son valores que se ubican dentro de la etiqueta de apertura para proporcionar información adicional o especificar el comportamiento del elemento. Su sintaxis básica es element <code>attribute="value"</code>.</p>
+<p>Atributos Booleanos: Son atributos que pueden estar presentes o ausentes. Si están presentes, su valor es verdadero; de lo contrario, es falso (ej. <code>disabled</code>, <code>readonly</code>, <code>required</code>, <code>controls</code>, <code>loop</code>, <code>muted</code>, <code>allowfullscreen</code>).</p>
+<h2 id="2-elementos-comunes-del-cuerpo-body">2. Elementos Comunes del Cuerpo (<code>&lt;body&gt;</code>)<a class="headerlink" href="#2-elementos-comunes-del-cuerpo-body" title="Permanent link">&para;</a></h2>
+<p>Encabezados (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>): Se utilizan para indicar la importancia del contenido. Entre menor sea el número, más importante es el contenido (por ejemplo, <code>&lt;h1&gt;</code> es más importante que <code>&lt;h2&gt;</code>).</p>
+<p>Párrafos (<code>&lt;p&gt;</code>): Se utilizan para estructurar los bloques de texto en una página web.</p>
+<p>Contenedores y Organización:</p>
+<ul>
+<li><code>&lt;section&gt;</code>: Se utiliza para dividir el contenido en secciones más pequeñas.</li>
+<li><code>&lt;div&gt;</code>: Es un elemento genérico que no tiene significado semántico. Se usa como contenedor para agrupar otros elementos.</li>
+<li><code>&lt;main&gt;</code>: Representa el contenido principal de una página web.</li>
+<li><code>&lt;footer&gt;</code>: Se coloca en la parte inferior del documento y suele contener información de derechos de autor (copyright) u otros enlaces importantes.</li>
+</ul>
+<p>Énfasis de Texto:</p>
+<ul>
+<li><code>&lt;em&gt;</code>: Se utiliza para poner énfasis básico en un fragmento de texto.</li>
+<li><code>&lt;strong&gt;</code>: Se utiliza para poner un énfasis fuerte, indicando un sentido de urgencia o seriedad.</li>
+</ul>
+<p>Listas:</p>
+<ul>
+<li>Desordenadas (<code>&lt;ul&gt;</code>): Crean listas con viñetas; contienen elementos <code>&lt;li&gt;</code> anidados en su interior.</li>
+<li>Ordenadas (<code>&lt;ol&gt;</code>): Crean listas numeradas o secuenciales utilizando también elementos <code>&lt;li&gt;</code>.
+Ejemplos de listas:</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Listas Desordenadas</label><label for="__tabbed_1_2">Listas Ordenadas</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>hierba gatera<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>punteros láser<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>lasaña<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>tratamiento contra pulgas<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>truenos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>otros gatos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Figuras:</p>
+<ul>
+<li>El elemento <code>&lt;figure&gt;</code> se utiliza para agrupar contenido multimedia como imágenes y diagramas. </li>
+<li>El elemento &lt;<code>figcaption</code>&gt; se emplea para representar una leyenda o título para dicho contenido dentro de la figura.</li>
+</ul>
+<h2 id="3-identificadores-clases-y-enlaces">3. Identificadores, Clases y Enlaces<a class="headerlink" href="#3-identificadores-clases-y-enlaces" title="Permanent link">&para;</a></h2>
+<h3 id="ids-vs-clases">IDs vs. Clases<a class="headerlink" href="#ids-vs-clases" title="Permanent link">&para;</a></h3>
+<ul>
+<li>IDs <code>id</code>: Son identificadores únicos para elementos HTML. Solo deben usarse una vez por documento y no pueden contener espacios (se recomienda usar guiones para separar palabras).</li>
+<li>Clases <code>class</code>: Se utilizan para agrupar elementos con el fin de aplicarles estilos y comportamientos. A diferencia de los IDs, se puede reutilizar el mismo nombre de clase en todo el documento y su valor puede incluir espacios para asignar múltiples clases.</li>
+</ul>
+<p><strong>Enlaces <code>&lt;a&gt;</code> y el Atributo target</strong>
+El elemento de anclaje <code>&lt;a&gt;</code> aplica enlaces a una página web mediante el atributo href (que especifica la URL de destino). El atributo target le dice al navegador dónde debe abrir dicha URL:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Atributo de Video</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>controls</code></td>
+<td style="text-align: left;">Muestra los controles predeterminados del navegador para video (play, pausa, volumen, etc.).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>autoplay</code></td>
+<td style="text-align: left;">Comienza a reproducir el video automáticamente tan pronto como esté listo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>loop</code></td>
+<td style="text-align: left;">Hace que el video vuelva a empezar automáticamente cada vez que termine.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>muted</code></td>
+<td style="text-align: left;">Silencia el audio del video por defecto.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poster</code></td>
+<td style="text-align: left;">Especifica una imagen que se mostrará mientras el video se descarga o hasta que el usuario presione play.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>preload</code></td>
+<td style="text-align: left;">Sugiere al navegador cómo debe cargarse el video al cargar la página (<code>none</code>, <code>metadata</code>, <code>auto</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>src</code></td>
+<td style="text-align: left;">La URL del archivo de video que se va a reproducir.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>width</code> y <code>height</code></td>
+<td style="text-align: left;">Establecen las dimensiones del reproductor de video en píxeles.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="estados-de-los-enlaces-pseudoclases">Estados de los Enlaces (Pseudoclases)<a class="headerlink" href="#estados-de-los-enlaces-pseudoclases" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>:link:</code> Estado por defecto de un enlace que el usuario aún no ha visitado ni con el que ha interactuado.</li>
+<li><code>:visited:</code> Se aplica cuando el usuario ya ha visitado la página a la que apunta el enlace.</li>
+<li><code>:hover:</code> Se activa cuando el usuario mantiene el cursor sobre el enlace.</li>
+<li><code>:focus:</code> Se aplica cuando el enlace recibe el foco (por ejemplo, al navegar con el teclado).</li>
+<li><code>:active:</code> Se aplica a los enlaces que están siendo activados (por ejemplo, durante el clic izquierdo del mouse).</li>
+</ul>
+<h2 id="4-rutas-absolutas-vs-relativas">4. Rutas Absolutas vs. Relativas<a class="headerlink" href="#4-rutas-absolutas-vs-relativas" title="Permanent link">&para;</a></h2>
+<p>Una ruta es una cadena de texto que especifica la ubicación de un archivo o directorio en un sistema de archivos para enlazar recursos (imágenes, hojas de estilo, scripts).</p>
+<p><strong>Sintaxis de Ruta:</strong>
+- <code>/</code> o <code>\</code>: Separador de rutas (depende del sistema operativo).
+- <code>.</code>: Señala el directorio actual.
+- <code>..</code>: Señala el directorio padre.</p>
+<h3 id="ruta-absoluta">Ruta Absoluta<a class="headerlink" href="#ruta-absoluta" title="Permanent link">&para;</a></h3>
+<p>Es un enlace completo a un recurso. Comienza desde el directorio raíz, incluye toda la jerarquía de carpetas, el nombre del archivo con su extensión y, si está en la web, incluye también el protocolo (<code>http</code>, <code>https</code>, <code>file</code>) junto al nombre del dominio.</p>
+<h3 id="ruta-relativa">Ruta Relativa<a class="headerlink" href="#ruta-relativa" title="Permanent link">&para;</a></h3>
+<p>Especifica la ubicación de un archivo en relación con el directorio del archivo actual. No incluye el protocolo ni el nombre de dominio, lo que la hace más corta y flexible para enlaces internos del mismo sitio.</p>
+<h2 id="5-elementos-multimedia-y-contenido-reemplazado">5. Elementos Multimedia y Contenido Reemplazado<a class="headerlink" href="#5-elementos-multimedia-y-contenido-reemplazado" title="Permanent link">&para;</a></h2>
+<p>Un elemento reemplazado es aquel cuyo contenido está determinado por un recurso externo en lugar de estar definido por el propio CSS del documento.</p>
+<h3 id="imagenes-img">Imágenes (<code>&lt;img&gt;</code>)<a class="headerlink" href="#imagenes-img" title="Permanent link">&para;</a></h3>
+<p>Se utiliza para agregar imágenes. Requiere el atributo <code>src</code> para especificar la ubicación del archivo y es una buena práctica incluir el atributo <code>alt</code> (texto alternativo descriptivo).</p>
+<ul>
+<li>Formatos de imagen: Aunque PNG y JPG son comunes, se recomienda usar formatos más optimizados como WEBP o AVIF, a menos que se requiera soporte para navegadores antiguos.</li>
+<li>SVGs: Gráficos vectoriales escalables que rastrean datos basados en rutas y ecuaciones. Se pueden escalar a cualquier tamaño sin perder calidad.</li>
+</ul>
+<h3 id="elemento-iframe">Elemento <code>&lt;iframe&gt;</code><a class="headerlink" href="#elemento-iframe" title="Permanent link">&para;</a></h3>
+<p>Significa inline frame. Es un elemento en línea utilizado para incorporar otro contenido HTML directamente dentro de la página actual. Admite atributos como <code>src</code>, <code>width</code>, <code>height</code> y <code>allowfullscreen</code> (que permite el modo de pantalla completa).</p>
+<h3 id="audio-audio-y-video-video">Audio (<code>&lt;audio&gt;</code>) y Video (<code>&lt;video&gt;</code>)<a class="headerlink" href="#audio-audio-y-video-video" title="Permanent link">&para;</a></h3>
+<p>Permiten añadir contenido de sonido y video de forma nativa. El elemento audio soporta formatos como mp3, wav y ogg, mientras que el video soporta mp4, ogg y webm.</p>
+<ul>
+<li>Atributos clave:<ul>
+<li><code>controls</code>: Atributo booleano que habilita los controles integrados del reproductor (pausa, volumen, etc.). Si se omite, no se mostrarán.</li>
+<li><code>loop</code>: Hace que el archivo se reproduzca de manera continua.</li>
+<li><code>muted</code>: Inicia el contenido en estado silenciado.</li>
+<li><code>poster</code> (Exclusivo de <code>&lt;video&gt;</code>): Permite mostrar una imagen fija mientras el video se está descargando.</li>
+</ul>
+</li>
+<li>Elemento <code>&lt;source&gt;</code>: Dado que el soporte de formatos varía entre navegadores, se pueden incluir múltiples etiquetas <code>&lt;source&gt;</code> dentro de <code>&lt;audio&gt;</code> o <code>&lt;video&gt;</code> para que el navegador seleccione de forma automática la primera fuente compatible que entienda.</li>
+</ul>
+<h2 id="6-estructura-global-metadatos-y-seo">6. Estructura Global, Metadatos y SEO<a class="headerlink" href="#6-estructura-global-metadatos-y-seo" title="Permanent link">&para;</a></h2>
+<p>Todo documento HTML estándar requiere una plantilla base con los siguientes elementos esenciales:
+<div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>freeCodeCamp<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./styles.css&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div></p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code>: Informa al navegador qué versión de HTML se está utilizando.</li>
+<li><code>&lt;html lang="..."&gt;</code>: Es el elemento de nivel superior o raíz del documento. El atributo lang especifica el idioma.</li>
+<li><code>&lt;head&gt;</code>: Contiene metadatos e información detrás de escena necesaria para los navegadores y motores de búsqueda.</li>
+<li><code>&lt;meta charset="utf-8" /&gt;</code>: Establece la codificación de caracteres estándar UTF-8 que el sistema utiliza para almacenar y mostrar los datos de los caracteres.</li>
+<li><code>&lt;title&gt;</code>: Establece el texto que aparece en la pestaña o ventana del navegador.</li>
+<li><code>&lt;link&gt;</code>: Se usa para enlazar recursos externos como hojas de estilo CSS (rel="stylesheet") o iconos del sitio mediante el atributo href.</li>
+<li><code>&lt;body&gt;</code>: Representa y contiene todo el contenido visible del documento HTML.</li>
+<li><code>&lt;script&gt;</code>: Se utiliza para incrustar o enlazar código ejecutable. Aunque se puede escribir JavaScript directamente dentro de las etiquetas, la mejor práctica es enlazar a un archivo externo usando el atributo src (<code>&lt;script src="../archivo.js"&gt;&lt;/script&gt;</code>).</li>
+</ul>
+<h3 id="seo-y-etiquetas-open-graph-og">SEO y Etiquetas Open Graph (OG)<a class="headerlink" href="#seo-y-etiquetas-open-graph-og" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>SEO</strong> (Optimización para Motores de Búsqueda): Práctica que optimiza las páginas web para que sean más visibles y ocupen mejores lugares en los buscadores. El elemento <code>&lt;meta name="description" content="..."&gt;</code> ayuda proporcionando una breve descripción de la página.</p>
+</li>
+<li>
+<p><strong>Etiquetas Open Graph</strong>: Este protocolo permite controlar cómo aparece el contenido del sitio web cuando se comparte en plataformas de redes sociales (Facebook, LinkedIn, etc.) mediante elementos <code>&lt;meta&gt;</code> dentro del <code>&lt;head&gt;</code>:</p>
+</li>
+<li>
+<p><code>property="og:title"</code>: Establece el título que se muestra en las publicaciones de redes sociales.</p>
+</li>
+<li><code>property="og:type"</code>: Representa el tipo de contenido que se comparte (ej. website, article, video, music).</li>
+<li><code>property="og:image"</code>: Establece la imagen miniatura que se mostrará en la publicación.</li>
+<li><code>property="og:url"</code>: Configura la URL exacta a la que los usuarios serán redirigidos al hacer clic.</li>
+</ul>
+<h2 id="7-entidades-html">7. Entidades HTML<a class="headerlink" href="#7-entidades-html" title="Permanent link">&para;</a></h2>
+<p>Una entidad HTML (o referencia de carácter) es un conjunto de caracteres especiales que sirve para representar un carácter reservado en el lenguaje. Esto evita que el navegador los confunda con código HTML real. Ejemplos comunes:</p>
+<ul>
+<li>El símbolo ampersand: <code>&amp;amp;</code> (representa a &amp;)</li>
+<li>El símbolo menor que: <code>&amp;lt;</code> (representa a &lt;)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../01-html-basico/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: ¿Qué es HTML y para qué sirve?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                ¿Qué es HTML y para qué sirve?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-Elementos-de-Texto-Avanzados/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: HTML Semántico y Elementos de Texto Avanzados">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                HTML Semántico y Elementos de Texto Avanzados
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Joa
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.expand","navigation.top","navigation.tracking","search.highlight"],"search":"../../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e5f0216.min.js"></script>
+      
+    
+  </body>
+</html>

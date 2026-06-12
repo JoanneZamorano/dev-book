@@ -5,7 +5,7 @@ site_author = "Joa"
 copyright = "Copyright &copy; 2026 Joa"
 
 [project.theme]
-language = "en"
+language = "es"
 features = [
     "announce.dismiss",
     "content.code.annotate",
@@ -27,11 +27,15 @@ features = [
 
 [[project.theme.palette]]
 scheme = "default"
+primary = "cyan"
+accent = "cyan"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
+primary = "cyan"
+accent = "cyan"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
