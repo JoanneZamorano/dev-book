@@ -6,10 +6,19 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write      # 🟢 Permiso nativo para escribir en GitHub Pages
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps:deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,9 +32,19 @@ jobs:
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: Deploy Site
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+      - name: Install dependencies
         run: |
-          $HOME/.local/bin/uvx --with ghp-import zensical build
-          $HOME/.local/bin/uvx ghp-import -n -p -f site
+          $HOME/.local/bin/uv pip install --system zensical
+
+      - name: Build Site
+        run: |
+          $HOME/.local/bin/zensical build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
