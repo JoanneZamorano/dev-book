@@ -1,4 +1,4 @@
-name: Deploy Zensical Site
+name: JoaDevBook
 
 on:
   push:
